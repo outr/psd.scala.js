@@ -17972,3 +17972,5 @@ module.exports = PSD = (function(superClass) {
 
 
 },{"./psd/file.coffee":5,"./psd/header.coffee":6,"./psd/image.coffee":7,"./psd/init.coffee":"./psd/init.coffee","./psd/layer_mask.coffee":47,"./psd/lazy_execute.coffee":48,"./psd/nodes/root.coffee":55,"./psd/resources.coffee":60,"coffeescript-module":70,"rsvp":93}]},{},[]);
+
+window.PSD = require("psd");
