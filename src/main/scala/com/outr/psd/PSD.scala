@@ -12,6 +12,7 @@ object PSD {
   def fromURL(url: String): js.Thenable[PSD] = psd.fromURL(url)
   def fromEvent(e: Event): js.Thenable[PSD] = psd.fromEvent(e)
   def fromDroppedFile(file: File): js.Thenable[PSD] = psd.fromDroppedFile(file)
+  def fromFile(file: File): js.Thenable[PSD] = fromDroppedFile(file)
 }
 
 @ScalaJSDefined
