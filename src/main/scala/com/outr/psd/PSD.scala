@@ -1,18 +1,24 @@
 package com.outr.psd
 
-import org.scalajs.dom.html
+import org.scalajs.dom._
 import org.scalajs.dom.raw.{Event, File}
 
 import scala.scalajs._
-import scala.scalajs.js.annotation.{JSGlobal, JSImport, ScalaJSDefined}
+import scala.scalajs.js.annotation.ScalaJSDefined
 
-@js.native
-//@JSImport("psd", JSImport.Namespace)
-@JSGlobal("PSD")
-object PSD extends js.Object {
-  def fromURL(url: String): js.Thenable[PSD] = js.native
-  def fromEvent(e: Event): js.Thenable[PSD] = js.native
-  def fromDroppedFile(file: File): js.Thenable[PSD] = js.native
+object PSD {
+  private lazy val psd = window.require[PSDImplementation]("psd")
+
+  def fromURL(url: String): js.Thenable[PSD] = psd.fromURL(url)
+  def fromEvent(e: Event): js.Thenable[PSD] = psd.fromEvent(e)
+  def fromDroppedFile(file: File): js.Thenable[PSD] = psd.fromDroppedFile(file)
+}
+
+@ScalaJSDefined
+trait PSDImplementation extends js.Object {
+  def fromURL(url: String): js.Thenable[PSD]
+  def fromEvent(e: Event): js.Thenable[PSD]
+  def fromDroppedFile(file: File): js.Thenable[PSD]
 }
 
 @ScalaJSDefined

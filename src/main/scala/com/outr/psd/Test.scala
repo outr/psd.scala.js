@@ -20,6 +20,7 @@ object Test extends js.JSApp {
     dropZone.addEventListener("drop", (evt: DragEvent) => {
       evt.stopPropagation()
       evt.preventDefault()
+//      evt.dataTransfer.files.item(0)
       PSD.fromEvent(evt).toFuture.foreach { psd =>
         try {
           println("Processing...")
