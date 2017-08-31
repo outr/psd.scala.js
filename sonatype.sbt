@@ -1,23 +1,13 @@
 sonatypeProfileName := "com.outr"
-
-pomExtra in Global := {
-  <url>https://github.com/outr/scalajs-pixijs</url>
-    <licenses>
-      <license>
-        <name>MIT</name>
-        <url>https://raw.githubusercontent.com/outr/scalajs-pixijs/master/LICENSE</url>
-      </license>
-    </licenses>
-    <scm>
-      <connection>scm:git:github.com/outr/scalajs-pixijs</connection>
-      <developerConnection>scm:git:git@github.com:outr/scalajs-pixijs</developerConnection>
-      <url>github.com/outr/scalajs-pixijs</url>
-    </scm>
-    <developers>
-      <developer>
-        <id>darkfrog</id>
-        <name>Matt Hicks</name>
-        <url>http://matthicks.com</url>
-      </developer>
-    </developers>
-}
+publishMavenStyle := true
+licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
+homepage := Some(url("https://github.com/outr/scalajs-pixijs"))
+scmInfo := Some(
+  ScmInfo(
+    url("https://github.com/outr/scalajs-pixijs"),
+    "scm:git@github.com:outr/scalajs-pixijs.git"
+  )
+)
+developers := List(
+  Developer(id="darkfrog", name="Matt Hicks", email="matt@outr.com", url=url("http://matthicks.com"))
+)
