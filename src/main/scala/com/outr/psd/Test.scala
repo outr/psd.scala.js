@@ -10,7 +10,6 @@ import scala.scalajs.js.JSON
 object Test extends js.JSApp {
   @JSExportTopLevel("application")
   def main(): Unit = {
-    println("Hello World!")
     val dropZone = document.getElementById("dropzone")
     dropZone.addEventListener("dragover", (evt: DragEvent) => {
       evt.stopPropagation()
