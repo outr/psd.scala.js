@@ -1,6 +1,6 @@
 name := "psd.scala.js"
 organization := "com.outr"
-version := "3.2.0"
+version := "3.2.0.1"
 
 scalaVersion := "2.12.3"
 crossScalaVersions := List("2.12.3", "2.11.11", "2.13.0-M1")
